@@ -1,0 +1,17 @@
+{
+  "name": "complex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js",
+    "dev" : "nodemon"
+  },
+  "dependencies" : {
+    "nodemon" : "2.0.3",
+    "redis" : "3.0.2"
+  },
+  "author": "Harish Indalkar",
+  "license": "ISC"
+}
