@@ -33,7 +33,7 @@ class Fib extends Component {
         // console.log(typeof this.state.seenIndexes);
         let numbers = "";
         for(let num of this.state.seenIndexes){
-            numbers += num['number'] + " ";
+            numbers += num['number'] + "   ";
         }
 
         return numbers;
@@ -62,6 +62,12 @@ class Fib extends Component {
         const res = await axios.post('/api/values',{
             index : this.state.index
         });
+
+        if(res.data["working"]){
+            this.fetchValues();
+            this.fetchIndexes();
+        }
+
         console.log(res);
 
         this.setState({index:''});
