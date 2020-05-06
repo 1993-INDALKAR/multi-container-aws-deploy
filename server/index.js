@@ -25,7 +25,8 @@ const pgClient = new Pool({
     user: keys.pgUser,
     host: 'postgres',
     database: keys.pgDatabase,
-    password: encodeURIComponent(keys.pgPassword),
+    // password: encodeURIComponent(keys.pgPassword),
+    password: 'postgres_password',
     port: keys.pgPort
 });
 
