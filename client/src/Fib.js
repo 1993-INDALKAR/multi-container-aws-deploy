@@ -94,14 +94,19 @@ class Fib extends Component {
                     { this.state.seenIndexes.map(num=>num["numbers"]).join(', ') }
 
                     <h3>Calculated Values :</h3>
+                    <div>
                     { /* {this.renderValues()} */
                     Object.keys(this.state.values).map(key=>{
+                        return(
                         <div key={key}>
                             For index {key} I calculated {this.state.values[key]}
                         </div>
+                        )
                     })
                                 
                     }
+                    </div>
+                    
                 </div>
             </>
             
