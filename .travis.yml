@@ -7,7 +7,7 @@ services:
     - docker 
 
 before_install:
-    - docker build -t harishindalkar/docker-multi-container-aws -f ./client/Dockerfile.dev ./
+    - docker build -t harishindalkar/docker-multi-container-aws -f ./client/Dockerfile.dev ./client
     
     
 
