@@ -21,19 +21,22 @@ const { Pool,Client } = require('pg');
 //     }
 // })
 
-const pgClient = new Pool({
-    user: keys.pgUser,
-    // user: 'postgres',
-    host: keys.pgHost,
-    database: keys.pgDatabase,
-    // database: 'postgres',
-    // password: encodeURIComponent(keys.pgPassword),
-    password: keys.pgPassword,
-    port: 6379
+// const pgClient = new Pool({
+//     user: keys.pgUser,
+//     // user: 'postgres',
+//     host: keys.pgHost,
+//     database: keys.pgDatabase,
+//     // database: 'postgres',
+//     // password: encodeURIComponent(keys.pgPassword),
+//     password: keys.pgPassword,
+//     port: 6379
+// });
+
+const connectingString = `postgres://${keys.pgUser}:${keys.pgPassword}@${keys.host}/${keys.pgDatabase}`;
+
+const pgClient = new Client({
+    connectionString: connectingString
 });
-
-
-
 
 // const pgClient = new Pool({
 //     user: keys.pgUser,
