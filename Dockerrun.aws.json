@@ -17,7 +17,7 @@
         },
         {
             "name": "nginx",
-            "image": "harishindalkar/multi-nginx",,
+            "image": "harishindalkar/multi-nginx",
             "hostname": "nginx",
             "essential": true,
             "portMappings":[
