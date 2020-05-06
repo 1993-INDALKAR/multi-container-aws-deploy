@@ -20,10 +20,10 @@ after_success:
     - docker build -t harishindalkar/multi-server ./server
     - docker build -t harishindalkar/multi-nginx ./nginx
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker push harishindalkar/multi-client
-    - docker push harishindalkar/multi-worker
-    - docker push harishindalkar/multi-server
-    - docker push harishindalkar/multi-nginx
+    - docker push harishindalkar/multi-client:latest
+    - docker push harishindalkar/multi-worker:latest
+    - docker push harishindalkar/multi-server:latest
+    - docker push harishindalkar/multi-nginx:latest
 
 deploy:
     edge: true
