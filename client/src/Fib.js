@@ -91,7 +91,7 @@ class Fib extends Component {
                     <h3>Indexes I have seen :</h3>
                     {/* {this.renderSeenIndexes()} */}
 
-                    { this.state.seenIndexes.map(num=>num["numbers"]).join(', ') }
+                    { this.state.seenIndexes.map(num=>num["number"]).join(', ') }
 
                     <h3>Calculated Values :</h3>
                     <div>
